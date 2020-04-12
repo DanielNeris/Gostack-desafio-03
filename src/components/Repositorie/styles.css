@@ -1,0 +1,20 @@
+li {
+  border-bottom: 1px solid;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.acitons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
