@@ -23,7 +23,7 @@ function App() {
         techs: techs,
       });
 
-      setRepositories([...repositories, response.data.data]);
+      setRepositories([...repositories, response.data]);
 
       setTitle("");
       setUrl("");
@@ -54,7 +54,7 @@ function App() {
       try {
         const response = await api.get("/repositories");
 
-        setRepositories(response.data.data);
+        setRepositories(response.data);
       } catch (error) {
         toast.error("Error, something was wrong with your request ");
       }
@@ -71,9 +71,8 @@ function App() {
 
   return (
     <div className="container">
+      <button onClick={handleAddRepository}>Adicionar</button>
       <div>
-        <button onClick={handleAddRepository}>Adicionar</button>
-
         <form onSubmit={(e) => handleAddRepository(e)}>
           <div className="item">
             <label>Title </label>
